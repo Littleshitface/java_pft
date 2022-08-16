@@ -2,16 +2,16 @@ package ru.stqa.pft.sandbox;
 
 public class Test {
   public static void main(String[] args){
-    P1 a = new P1();
-    P2 b = new P2();
-    a.xa = 5;
-    b.xb = 9;
-    a.ya = 4;
-    b.yb = 9;
-    System.out.println("Расстояние между точкой A и B = " + distance(a, b));
+    Point p1 = new Point();
+    Point p2 = new Point();
+    p1.x = 5;
+    p2.x = 9;
+    p1.y = 4;
+    p2.y = 9;
+    System.out.println("Расстояние между точкой A и B = " + distance(p1, p2));
   }
 
-  public static double distance (P1 a, P2 b){
-    return Math.sqrt((b.xb - a.xa) * (b.xb - a.xa) + (b.yb - a.ya) * (b.yb - a.ya));
+  public static double distance (Point p1, Point p2){
+    return Math.sqrt((p2.x - p1.x) * (p2.x - p1.x) + (p2.y - p1.y) * (p2.y - p1.y));
   }
 }
